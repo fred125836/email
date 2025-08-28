@@ -36,3 +36,14 @@ if st.button("Send Email"):
             st.error(f"❌ Failed to send email: {e}")
     else:
         st.warning("⚠️ Please fill in all fields.")
+
+
+# Hide Streamlit style
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}  /* Hides the hamburger menu */
+    footer {visibility: hidden;}     /* Hides the footer */
+    header {visibility: hidden;}     /* Hides the header */
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
